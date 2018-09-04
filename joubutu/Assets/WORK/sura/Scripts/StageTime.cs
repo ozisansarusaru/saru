@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class StageTime : MonoBehaviour {
 
@@ -8,6 +9,8 @@ public class StageTime : MonoBehaviour {
     private int maxTime;
     [SerializeField]
     private int nowTime;
+
+    Slider _slider;
 
     // Use this for initialization
     void Start()
@@ -25,6 +28,8 @@ public class StageTime : MonoBehaviour {
 
     void Init()
     {
+        // スライダーを取得する
+        _slider = GameObject.Find("Bar").GetComponent<Slider>();
         //nowTimeを初期化
         nowTime = 0;
     }
@@ -34,6 +39,7 @@ public class StageTime : MonoBehaviour {
         //maxTimeまでカウントしような
         if (maxTime >= nowTime)
         {
+            _slider.value = nowTime;
             nowTime++;
         }
         else
