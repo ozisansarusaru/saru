@@ -19,12 +19,13 @@ public class GameManager : MonoBehaviour
     // 現在の状態
     private GameState currentGameState;
 
+    [SerializeField]
+    private GameObject m_startText;
+
+    private GameObject hogeText;
+
 
     // 例
-
-    public Text label;
-    public Button button;
-
     private Text m_text;
 
     void Awake()
@@ -66,24 +67,21 @@ public class GameManager : MonoBehaviour
     // Startになったときの処理
     void StartAction()
     {
+       hogeText=Instantiate(m_startText);
+       SetCurrentState(GameState.Prepare);
     }
 
     // Prepareになったときの処理
     IEnumerator PrepareCoroutine()
-    {
-        label.text = "3";
-        yield return new WaitForSeconds(1);
-        label.text = "2";
-        yield return new WaitForSeconds(1);
-        label.text = "1";
-        yield return new WaitForSeconds(1);
-        label.text = "";
+    { 
+        yield return new WaitForSeconds(4);
+        Destroy(hogeText);
         SetCurrentState(GameState.Playing);
     }
     // Playingになったときの処理
     void PlayingAction()
     {
-        label.text = "ゲーム中";
+       // label.text = "ゲーム中";
     }
     // Endになったときの処理
     void EndAction()

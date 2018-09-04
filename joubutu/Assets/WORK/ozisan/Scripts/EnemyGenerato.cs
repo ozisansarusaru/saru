@@ -32,6 +32,5 @@ public class EnemyGenerato : MonoBehaviour {
     {
         Instantiate(m_Popuko,transform.position,Quaternion.identity);
         m_audioSource.Play();
-
     }
 }
