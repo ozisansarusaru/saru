@@ -7,12 +7,20 @@ public class Player : MonoBehaviour {
     [SerializeField][Range(0.1f,0.5f)]
     private float m_moveSpeed;
 
+    private SpriteRenderer m_spriteRenderer;
+
+    private AudioSource m_audioSource;
+
+    private Rigidbody2D m_rigidbody2D;
+
     void Move(){
         if (Input.GetKey(KeyCode.A)){
             transform.position += new Vector3(-m_moveSpeed, 0, 0);
+            m_spriteRenderer.flipX = true;
         }
         if (Input.GetKey(KeyCode.D)){
             transform.position += new Vector3(m_moveSpeed, 0, 0);
+            m_spriteRenderer.flipX = false;
         }
         if (Input.GetKey(KeyCode.W)){
             transform.position += new Vector3(0, m_moveSpeed, 0);
@@ -20,10 +28,27 @@ public class Player : MonoBehaviour {
         if (Input.GetKey(KeyCode.S)){
             transform.position += new Vector3(0, -m_moveSpeed, 0);
         }
+
+        if(m_rigidbody2D.IsSleeping())
+        m_audioSource.Play();
     }
-	
-	// Update is called once per frame
-	void Update () {
+
+    private void OnTriggerEnter2D(Collider2D arg_col)
+    {
+        if (arg_col.tag == "Enemy")
+        {
+            Debug.Log("ここに死んだときの処理をかこうとん");
+        }
+    }
+
+    private void Start(){
+        m_spriteRenderer = GetComponent<SpriteRenderer>();
+        m_audioSource = GetComponent<AudioSource>();
+        m_rigidbody2D = GetComponent<Rigidbody2D>();
+    }
+
+    // Update is called once per frame
+    void Update () {
         Move();
     }
 }
