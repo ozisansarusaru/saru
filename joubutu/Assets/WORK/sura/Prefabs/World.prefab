@@ -51,5 +51,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 147d8c116434d3e44b2964639b9e79f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxTime: 7200
+  maxTime: 3600
   nowTime: 0
