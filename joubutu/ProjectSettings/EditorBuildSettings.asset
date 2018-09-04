@@ -8,4 +8,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/main.unity
     guid: 20c5047d5520d094d88203537a26a647
+  - enabled: 1
+    path: Assets/WORK/sura/Scenes/Clear.unity
+    guid: 0aec48929cd76aa4282c624df425ff89
   m_configObjects: {}
