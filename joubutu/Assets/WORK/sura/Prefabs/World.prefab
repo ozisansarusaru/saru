@@ -20,7 +20,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4459555374227328}
   - component: {fileID: 114023383442760100}
-  - component: {fileID: 114061560188963074}
   m_Layer: 0
   m_Name: World
   m_TagString: Untagged
@@ -54,16 +53,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxTime: 7200
   nowTime: 0
---- !u!114 &114061560188963074
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1586930982088460}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dab22592a00aacd4ea472441cb6a327a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  DebugMode: 0
-  fadeColor: {r: 0, g: 0, b: 0, a: 1}

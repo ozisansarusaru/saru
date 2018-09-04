@@ -13,6 +13,9 @@ public class Player : MonoBehaviour {
 
     private Rigidbody2D m_rigidbody2D;
 
+    [SerializeField]
+    private AudioClip m_playerDethe;
+
     void Move(){
         if (Input.GetKey(KeyCode.A)){
             transform.position += new Vector3(-m_moveSpeed, 0, 0);
@@ -37,14 +40,16 @@ public class Player : MonoBehaviour {
     {
         if (arg_col.tag == "Enemy")
         {
-            Debug.Log("ここに死んだときの処理をかこうとん");
+            FadeManager.Instance.LoadScene("GameOver", 2.0f);
+            m_audioSource.clip = m_playerDethe;
+            m_audioSource.Play();
         }
     }
 
     private void Start(){
         m_spriteRenderer = GetComponent<SpriteRenderer>();
         m_audioSource = GetComponent<AudioSource>();
-        m_rigidbody2D = GetComponent<Rigidbody2D>();
+        m_rigidbody2D = GetComponent<Rigidbody2D>();      
     }
 
     // Update is called once per frame
