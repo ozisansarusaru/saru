@@ -256,6 +256,16 @@ Prefab:
       propertyPath: m_playerDethe
       value: 
       objectReference: {fileID: 8300000, guid: 99f2e0ea06eb42d4ca97a71d9325cc18, type: 3}
+    - target: {fileID: 212676021260203074, guid: 6f91a1a4ed33bab459356248aadc95fb,
+        type: 2}
+      propertyPath: m_FlipX
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114186585413603006, guid: 6f91a1a4ed33bab459356248aadc95fb,
+        type: 2}
+      propertyPath: m_anglePower
+      value: 100
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f91a1a4ed33bab459356248aadc95fb, type: 2}
   m_IsPrefabAsset: 0
