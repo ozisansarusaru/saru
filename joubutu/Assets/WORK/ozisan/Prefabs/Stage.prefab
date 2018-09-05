@@ -541,7 +541,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: e0e0defceccc5bd419dd004bf88aa265, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.3
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -636,7 +636,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: e0e0defceccc5bd419dd004bf88aa265, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.3
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -757,7 +757,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0701f676508db64b9583cf9debd726b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Popuko: {fileID: 1050298573551328, guid: 146d04e53dfa82541a85a40824d7dfa8, type: 2}
+  m_Popuko: {fileID: 1251082908212330, guid: 26f6a07551452224b8b0df8ae1b8dc3c, type: 2}
   m_birthTime: 2
 --- !u!114 &114985866864122382
 MonoBehaviour:

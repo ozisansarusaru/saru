@@ -152,12 +152,16 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 114783375409249348, guid: 2dedc7fd712291442b49f64ea9b38a16,
+    - target: {fileID: 82877541295773506, guid: 2dedc7fd712291442b49f64ea9b38a16,
         type: 2}
-      propertyPath: m_Popuko
-      value: 
-      objectReference: {fileID: 1251082908212330, guid: 26f6a07551452224b8b0df8ae1b8dc3c,
+      propertyPath: m_Volume
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 82314348729136480, guid: 2dedc7fd712291442b49f64ea9b38a16,
         type: 2}
+      propertyPath: m_Volume
+      value: 0.6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2dedc7fd712291442b49f64ea9b38a16, type: 2}
   m_IsPrefabAsset: 0
