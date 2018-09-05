@@ -16,6 +16,8 @@ public class Player : MonoBehaviour {
     [SerializeField]
     private AudioClip m_playerDethe;
 
+    private int trg = 0;
+
     void Move(){
         if (Input.GetKey(KeyCode.A)){
             transform.position += new Vector3(-m_moveSpeed, 0, 0);
@@ -40,9 +42,13 @@ public class Player : MonoBehaviour {
     {
         if (arg_col.tag == "Enemy")
         {
-            FadeManager.Instance.LoadScene("GameOver", 2.0f);
-            m_audioSource.clip = m_playerDethe;
-            m_audioSource.Play();
+            if (trg == 0)
+            {
+                FadeManager.Instance.LoadScene("GameOver", 2.0f);
+                m_audioSource.clip = m_playerDethe;
+                m_audioSource.Play();
+                trg = 1;
+            }
         }
     }
 
